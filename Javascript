@@ -1,0 +1,135 @@
+Notes
+variables in js:
+variables are containers or memory blocks to store data.
+Variables are 
+1.case sensitive
+2.start with letters,-,$
+3.can’t start with numbers
+4.reserved words(keywords) not allowed
+5.allow letters, -,$,numbers
+Types of Vairables:
+1.	Var     -1995-2015(used in old versions)
+2.	Let     -2015
+3.	const
+
+reassinging varaibles is posible with var and let
+ var name="anusha";
+ name="jesu";
+it displays the latest value as output
+let name=”anu”
+name=”jesuu”
+reassinging with const not posibble
+const a=1
+ a=5
+ a=a+a
+ console.log(a); //output – erorr
+re-declaring with var is accepted:
+var a=1
+var a=5
+console.log(a+a)
+re-declaring with let and const is not accepted:
+
+let a=1                                            const a=1 
+let a=5                                           const a=5
+  document.write(a+a)                             document.write(a+a) 
+console.log(a+a) //output erorr                   document.log(a+a) //output error
+
+var –
+varaibles decalred with var don’t have block scope
+only inside block is considered
+var a="anu"
+          {
+            var a="jesuu"
+            console.log(a)
+          }
+          console.log(a)
+
+let-
+varaibles decalred with let have block scope
+first inside block is considered first then outside of the block
+let a="anu"
+          {
+            let a="jesuu"
+            console.log(a)
+          }
+          console.log(a)
+
+
+  VS CODE
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //  var name="anusha";
+       // name="jesu";
+       // console.log(name);
+       // document.write(name); 
+
+        // let name="anusha";
+        // name="jesu";
+        // console.log(name);
+        // document.write(name);
+
+        //const a=1
+        //a=5
+        //a=a+a
+        //console.log(a); 
+
+        //var a=1
+        // var a=5
+        // console.log(a+a)
+
+        //let a=1
+        // let a=5
+        // document.write(a+a)
+        //console.log(a+a)
+
+
+        //const a=1
+        //const a=5
+        // document.write(a+a)
+        // console.log(a+a)
+
+         // var a="anu"
+         // {
+         //  var a="jesuu"
+         //  console.log(a)
+         // }
+         //  console.log(a)
+
+         // let a="anu"
+         // {
+          //  let a="jesuu"
+           // console.log(a)
+            //console.log(a)
+
+         // }
+         // console.log(a)
+          //console.log(a)
+
+         // let a=11
+          //{
+          //  let a=5
+          //  console.log(a+a)
+         // }
+         // console.log(a+a)
+
+          var a=11
+          {
+            var a=5
+            console.log(a+a)
+          }
+          console.log(a+a)
+
+
+
+
+
+    </script>
+</body>
+</html>
