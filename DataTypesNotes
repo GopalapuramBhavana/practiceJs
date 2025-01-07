@@ -1,0 +1,74 @@
+#VS CODE
+<script>
+      /*  let  a=-3.5
+        console.log(typeof(a))
+        document.write(a) */
+
+       /* let a=3.5
+        let b=3.5
+        console.log("hi+ a+b")
+        console.log(`hi +${a+b}`) */
+
+       /*let a='sai'
+        let b='kumar'
+        let greeting=`ReactJs student = ${a+" "+b}`
+        console.log(greeting) */
+
+       /* let a=null
+          console.log(a) 
+          console.log(typeof(a))    */
+
+          let a=undefined
+          console.log(a) 
+          console.log(typeof(a))  
+    
+    </script>
+
+
+#NOTES
+
+Data types:
+Two types
+1.primitive data type
+2.non-primitive data type
+To check the data type-typeOf
+1.primitive data type
+Predefined;we can store single values
+1.Numbers: integers,floats
+2.String: stream of characters,enclosed in quotes
+Single ,double ,backtick quotes
+3.Boolean: true or false
+4.Null: empty value or no value
+5.undefined: declared variables with no values
+
+1.Number
+Ex:1,-1,2,3.5
+
+let  a=-3.5
+console.log(typeof(a))
+document.write(a) ----output :number
+
+2)Strings: Stream of characters enclosed in quoets
+Backticks:
+Inside string if we want add functionality we can add backtricks
+ let a=3.5
+ let b=3.5
+ console.log("hi+ a+b")------------output:  hi+ a+b
+ console.log(`hi +${a+b}`)----------output: hi +7
+
+String concatination
+let a='sai'
+let b='kumar'
+let greeting=`ReactJs student = ${a+" "+b}`
+console.log(greeting)
+Output----ReactJs student = sai kumar
+
+NULL
+let a=null
+console.log(a) // output:null
+console.log(typeof(a))    //Output- object
+
+UNDEFINED
+let a=undefined
+console.log(a) 
+console.log(typeof(a)) 
