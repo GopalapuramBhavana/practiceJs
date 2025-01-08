@@ -1,0 +1,76 @@
+JavaScript Operators :
+1. Arithmetic : Add- +,Sub - -,Mult - *,Div - /(Q), modulus operator - %(R), Exponential(raised to the power) - **,++,--
+ex:
+  let  a = 10
+        let b =5
+        b++
+        a--
+        document.write(b,"<br>")
+        document.write(a, "<br>")
+        document.write(a%b, "<br>")
+        //remainder part
+        document.write(a/b,"<br>")
+        //quotient
+        document.write(a*b, "<br>")
+        document.write(a**b)
+
+2. Assignment operator: +=, -=, /=, %=
+ex :
+let a = 10
+        let b=5
+        b-= 30 // b - 30 = 5-30= -25
+        document.write(b,",<br>")
+        a+=30 // a+30 = 10+30 = 40
+        document.write(a,"<br>")
+
+3. Logical operators: AND - && , OR - ||, NOT - ! (there are no symbols in python)
+ex : let a= 10
+        let b = 5
+        document.write(a>b && b > 11, "<br>")
+        document.write(a>b || b > 11, "<br>")
+        document.write(!(false),"<br>") 
+        document.write(!(a>b),"<br>") // 10 >5
+
+4. Relational operators (comparision): <,>,<=,>=,==,===,!=,!==
+ex:     let a = 105
+        let b = 105
+        let c = '105'
+        document.write(a==b,"<br>") //true
+        document.write(a==c,"<br>") //true. it won't check the datatype
+        document.write(a===b,"<br>") //true 
+        document.write(a!=b,"<br>") //false
+        document.write(a!==b,"<br>") //false
+        document.write(a<b,"<br>") //false
+        document.write(a>b,"<br>") //false
+        document.write(a<=b,"<br>") //true
+        document.write(a>=b,"<br>") //true
+
+5. Conditional operators (ternary operator) : ?
+-> first evaluates an expression for a true or false;
+Syntax : 
+Condition ? exp1 : exp2
+ex: let t = 40
+        let r= (t>40) ? "Ac- off" : "Ac- on" // if condition false 2nd exp executes
+        document.write(r)
+o/p : Ac - on 
+
+Window functions :
+1.Alert() - display message
+ex: alert("hi chiru")
+        console.log(alert)
+        document.write(alert) */
+        let t = 41
+        let r= (t>40) ? "Ac- off" : "Ac- on" // if conditio n false 2nd exp executes
+        document.write(r)
+2.prompt() - take input from the user
+ex 1: let name = prompt("Enter name ?")
+        alert(name)
+        let t = 41
+        let r= (t>40) ? "Ac- off" : "Ac- on" // if conditio n false 2nd exp executes
+        document.write(r)
+ex2: let aa=prompt()
+        let bb=prompt()
+        console.log(typeof(aa)) // type casting
+        document.write(typeof(aa))
+        console.log(aa+bb)
+        document.write(aa+bb)
