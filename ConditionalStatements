@@ -1,0 +1,48 @@
+Conditional statements: 
+-> to make the set of instructions (block of code) execute only when the given condition is True
+-> used to decide whether the code has to be executed or skip based on the given condition
+-> will execute in a sequence (line by line)
+-> condition : an expression that evaluates an result (True or false)
+ex: console.log(5>6)
+Methods : if , if - else, else if, switch, ternary operator
+if : only one condition if condition is true it executes otherwise it will skip
+syntax : if(condition){ 
+              block of code
+         }
+ex: let a =4
+        let b = 5
+        if(a<b){
+            document.write("hello world","<br>")
+        }
+        document.write("brilliant chiru")// it executes because it is out of the loop
+op : hello world
+     brilliant chiru
+if-else: 
+ex: let a=4
+        let b = 5
+        if(a>b){
+            document.write("hello world","<br>")
+        }else {
+            document.write("hi sam","<br>")
+        }
+        document.write("brilliant chiru")
+else if :
+ex: let age= prompt("enter your age")
+        let name = prompt("enter your name")
+        if(age<18){
+            alert(name +" you are too young to marry")
+        }else if(age>35){
+            alert(name +" you are too old to marry")
+        }else {
+            alert(name +" perfect age to marry")
+        }
+        alert("welcome to my world")
+else :
+ex : let a = prompt("enter score of a")
+        let b = prompt("enter b score")
+        let c = a+b
+        if((a>300 || b>300) && (c < 500)){
+            alert("Can team up")
+        }else {
+            alert("Cannot team up")
+        }
