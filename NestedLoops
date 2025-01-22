@@ -1,0 +1,19 @@
+continue :
+for(let i=1; i<=8;i=i+2){
+        if(i>5){
+            continue
+        }
+        document.write(i+1+" ");
+       }  
+
+Nested loops : a loop inside another loop 
+-> inner loop will execute one time for each iteration of outer loop
+-> an inner loop within the repeating block of outer loop
+for(let i=1;i<=3;i++){          //outer loop
+        document.write(i,"<br>");
+        
+       for(let j=1;j<=4;j++){          //inner loop
+        document.write(j,"<br>");
+       }
+       document.write("<br>")
+       }
