@@ -1,0 +1,43 @@
+Functions : A function is reusable block of code. It can be call any where in the program
+Reusable code : using an existing code with out writing it every time we need
+use the same code by passing different arguments to get the results
+JS : keyword - function
+python :keyword - def
+Parameters - values(variables) which are declared inside the () while defining a functions
+Arguments - values which are passed through the parameters
+Parameters at the time of calling the function
+Syntax:
+function greet(name)
+ex 1 :
+function greet(){
+            document.write("Hi Bhavana")
+        }
+        greet()
+        document.write("Hi jeshwitha")
+        greet()
+        function greet(){
+            document.write("Hi Anusha")
+        }
+        greet()
+ex 2:
+ function g(name){
+            document.write("Hi " + name)
+        }
+        let name = prompt("Enter your name :")
+        g(name)
+ex 3:
+ function add(n1,n2){
+            return n1+n2;
+        }
+        let n1 = parseInt(prompt("Enter 1st number : "))
+        let n2 = parseInt(prompt("Enter 2nd number : "))
+        let result= add(n1,n2)
+        document.write("Addition of "+n1+" and "+n2+"="+ result)
+
+Anonymous function: A function with out a name, after we create a function without name and we assign it to a variable
+ex 1: 
+sum = function(n1,n2){
+let r = n1+n2
+return r
+}
+document.write(sum(2,3))
