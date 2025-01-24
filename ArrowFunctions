@@ -1,0 +1,67 @@
+Arrow Functions : ES6 version
+-> more readable and more structure
+-> anonymous functions(lambda functions)
+-> without function name but they are assigned to a variable
+Arrow functions without parameter :
+ex: 
+let c =() => {
+document.write("hi")
+}
+c() // call by using the variable name 
+Arrow functions with parameter :
+ex:
+let x =(x,y)=> {
+document.write(x+y)
+}
+x(20,30)
+y(40,50)
+Arrow Function with one argument :
+ex:
+//without using parenthesis
+let greet=x => document.write(x);
+greet('hello')
+Arrow Function without argument :
+ex:
+let greet=() => document.write('hello');
+greet()
+Arrow function as an expression :
+ex :
+let age=18;
+let welcome =(age<18)?
+()=> document.write('hi jeshu'):
+()=> document.write('hi anuuu');
+welcome()
+
+Synchronous and Asynchronous functions :
+Synchronous Function : execute the task sequentially
+ex:
+function task1() {
+document.write("Task 1 : Start")
+}
+function task2() {
+document.write("Task 2 : Start")
+}
+function task3() {
+document.write("Task 3 : Start")
+}
+task1()
+task2()
+task3()
+Asynchronous function : executes the tasks without before tasks and executes the multiple tasks at a time
+ex:
+document.write("hi anu");
+setTimeOut(() => {
+document.write("hi I am waiting")
+},5000);
+document.write("I am in Lab")
+ex:
+function greet(name,callback){
+document.write('Hello, $(name)}!`
+callback();
+//this calls the callback function after greeting
+}
+function sayGoodbye(){
+document.write("Goodbye")
+}
+//call greet and pass sayGoodbye as the callback
+greet("jeshu", sayGoodbye)
