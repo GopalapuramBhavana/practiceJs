@@ -1,0 +1,72 @@
+Promise : A promise is a special JavaScript object that represents the eventual completion (or failure) of an asynchronous operation 
+-> Three states :
+1. pending - the initial state, the promise is still waiting for the operation of finish
+2. fulfilled - the operation completed successfully
+3. rejected - the operation failed
+Ex : to create a promise new Promise();
+-> The promise constructor takes a function with 2 parameters :
+1. resolve - to mark as the promise is successful
+2. reject - to mark it as failed 
+-> Handling : 
+.then() method is called when the promise is fulfilled. It receives the result from the resolve();
+.catch() method is called when promise is rejected; 
+Ex :
+let myPromise = new Promise((resolve, reject) => {
+let success = true 
+if(success){
+resolve("The operation was successful")
+}else {
+reject("Operation failed")
+}
+});
+myPromise 
+.then(result => {
+document.write(result)
+})
+.catch(error => {
+document.write(error)
+})
+
+Chaining Promises :
+you can have chain multiple .then() methods
+Ex :
+let promise = new promise ((resolve,reject) => {
+resolve(5);
+})
+promise
+.then(result=> {
+document.write(result)
+return result * 2
+})
+.then(result => {
+document.write(result)
+return result + 3
+})
+.then(result => {
+document.write(result)
+document.write(result)
+})
+.catch(error => {
+document.write("error",error)
+};)
+
+1. Promise with setTimeOut :
+-> using setTimeOut the promise will resolve after certain amount of time;
+Ex: 
+let fetchData = new Promise((resolve, reject) => {
+let dataFetched=false
+setTimeOut(()=> {
+if(dataFetched){
+resolve("Data fetched successfully")
+}else {
+reject("Data fetching failed")
+}
+},2000)
+})
+fetchData 
+.then(result => {
+document.write(result)-
+})
+.catch(error => {
+document.write(error)
+}
