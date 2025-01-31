@@ -1,0 +1,68 @@
+Dom :
+methods : 
+1. create- Element (single, multiple)
+2. appendChild() #parent at the end
+3. insertBefore(): insert a new node before an existing node as child node of a specified parent
+-> requires a reference to both the new node and existing node you want to insert before 
+ex :
+<body>
+    <div id="a">
+        <h1 id="w">Ravi</h1>
+        <h1 id="r">ram</h1>
+    </div>
+    <div id="b">
+        <h2 id="g"> sam </h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        //to insert chiru before ram
+       // let n = document.createElement('h1')
+        //n.textContent = "chiru"
+
+        //to insert ganesh before ravi
+       /* let nn = document.createElement('h1')
+        nn.textContent = "ganesh"
+
+        let p = document.getElementById('a')
+        let l = document.getElementById('r')
+        p.insertBefore(n, l)
+        
+        let pp = document.getElementById('a')
+        let ll= document.getElementById('w')
+        pp.insertBefore(nn, ll)
+
+        let ppp=document.getElementById('b')
+        ppp.appendChild(g)
+        console.log(ppp.innerText)*/
+
+   //rmeove():
+
+       // let rp=document.getElementById('b')
+      //  rp.remove()
+
+      //remove elemnt by child
+      /*let pp=document.getElementById('a')
+      let cc=document.getElementById('r')
+      console.log(cc)
+      pp.removeChild(cc)*/
+
+
+    //Replace
+    let n=document.createElement('h1')
+    n.textContent="malla reddy university"
+
+    let p=document.getElementById('')
+     p.replaceChild(n)
+        
+    </script>
+
+4. remove element : 
+ex : let b = document.getElementById('a')
+b.remove()
+5. remove child : removeChild() method
+ex :
+let pp= document.getElementById("a")
+        let cc = document.getElementById("d")
+        document.write(cc)
+        pp.removeChild(cc)
+6. replace :
