@@ -1,0 +1,55 @@
+JSX : JavaScript XML 
+-> It is a syntax extension for JavaScript 
+-> JSX allows us to write HTML code in react JS 
+-> jsx all the html tags should be closed 
+-> jsx compiles the html code to js
+-> Babel is a tool in jsx : convert html code into js code 
+#cdn -paste
+ex :
+<div id="a"> </div>
+    <script type="text/babel">
+        const element=<h1 className ="aa"> Welcome to chiru It solutions</h1>
+        const e= document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(element)
+    </script>
+Expression : { }
+ex : <div id="a"> </div>
+    <script type="text/babel">
+        const n = 5
+        const m=<h1>React is {n*2} times better than JSX </h1>
+        const e= document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(m)
+    </script>
+ex 2 : <div id="root"> </div>
+    <script type="text/babel">
+        const App=()=>{
+            const isloggedIn=true;
+            return (
+            <div>
+                {isloggedIn?(<h1>Welcome back, user</h1>):(<h1>Please log in</h1>)}
+
+                {isloggedIn && <h1>You have a new notification</h1>}
+                </div>
+            )    
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+Functions :
+-> using a function call :
+-> you can use a function call directly within the js expression
+ex : <div id="a"></div>   
+   <script type="text/babel">
+    function getGreeting(name){
+        return `Hello, ${name}! Welcome to React`
+    }
+    function Greeting(){
+        const name="Bhavana"
+        return <h1>{getGreeting(name)}</h1>
+    }
+    //calling the function in jsx
+    //create a root and render the Greeting component
+    const root = ReactDOM.createRoot(document.getElementById('a'));
+    root.render(<Greeting/>)
