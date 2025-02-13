@@ -1,0 +1,59 @@
+Prop drilling :
+Ex :
+import React from "react";
+
+function App() {
+  const data = "i am bhavana";
+  return (
+    <div>
+      <User1 data ={data}/>
+    </div>
+  );
+}
+function User1({ data }) {
+  return <User2 data={data} />;
+}
+function User2({ data }) {
+  return <User3 data={data} />;
+}
+function User3({ data }) {
+  return <User4 data={data} />;
+}
+
+function User4({ data }) {
+  return <div>{data}</div>;
+}
+export default App;
+Ex 2 :
+import React,{createContext, useContext} from 'react';
+const DataContext = createContext();
+
+function App(){
+    const data = "I am a Student"
+    return (
+        <DataContext.Provider value={data}>
+            <user1/>
+
+        </DataContext.Provider>
+    )
+}
+
+
+function user1({data}){
+    return <user2 data={data}/>
+}
+
+function user2({data}){
+    return <user3 data={data}/>
+}
+
+function user3({data}){
+    return <user4 data={data}/>
+}
+
+function user4({data}){
+    const data=useContext{DataContext};
+    return <div>{data}</div>
+}
+
+export default App;
