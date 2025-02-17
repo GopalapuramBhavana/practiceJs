@@ -1,0 +1,80 @@
+Event handling in React :how you make your app do some thing when the user interacts with it, like clicking a button, submitting a form 
+How to use events :
+-> use camelCase for event names
+-> pass a function to the event (not to a function call)
+This function will run when a event happens
+1) clicking a button (onClick) :
+Ex : import React from 'react';
+function App(){
+    const handleClick=()=>{
+        alert("Button Clicked");
+    };
+    return (
+        <button onClick={handleClick}>Click Me</button>
+    )
+}
+export default App;
+2) Change event (onChange) :
+forms : This happens when you type in a text box
+Target - property of the event object, and is predefined by JavaScript for DOM events
+event.target - always refers the element that triggered the event
+event.target.value - used to access the value of input elements buttons, form elements
+Ex : import React, { useState } from 'react';
+function App(){
+    const [text, setText]= useState("")
+    const handleChange=(event)=>{
+        setText(event.target.value)
+    }
+    return (
+        <div>
+            <input type="text" value={text} onChange={handleChange} />
+            <p>Your Text :{text}</p>
+        </div>
+    )
+}
+export default App;
+3) Mouse events (onMouseEnter, onMouse Leave):
+These happens when we move the mouse over or away from the elements
+Ex : import React, { useState } from 'react';
+function App(){
+    const [isHovered, setHovered] = useState(false);
+    const handleMouseEnter=()=>{
+        setHovered(true);
+    }
+    const handleMouseLeave=()=>{
+        setHovered(false);
+    };
+    return (
+        <div>
+            <button 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+            style={{
+                backgroundColor: isHovered ? 'blue' : 'pink',
+                color: isHovered ? 'white' : 'black',
+            }} > Hover me</button>
+    {isHovered && <p>Mouse is over the button</p>}        
+        </div>
+    );    
+}
+export default App;
+4) Key events : (onKeyDown):
+key is pressed on the key board
+syntax : onKeyDown = {keyDownFunction}
+keyDownFunction - function that runs whenever any key is pressed on the key word
+Return type - returns a keyword Event object that provides information about 
+Ex: import React, { useState } from 'react';
+function App(){
+    const[key,setKey]=useState("");
+    const handleKeyDown=(event)=>{
+        setKey(event.key);
+    }
+    return(
+        <div className='app'>
+            <h1>Welcome to the keyboard event handler</h1>
+            {key && <h2>Pressed key:{key}</h2>}
+            <input type="text" onKeyDown={handleKeyDown} placeholder='press here' />
+        </div>    
+    );
+}
+export default App;
